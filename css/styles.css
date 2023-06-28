@@ -62,10 +62,9 @@ img {
 }
 .container {
   width: 1158px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+
+  padding: 0 15px;
+
   margin: 0 auto;
 }
 
@@ -228,6 +227,7 @@ img {
 
 .team-saction {
   background-color: var(--light-bg-cl);
+  height: 732px;
 }
 
 .team-title {
@@ -237,17 +237,39 @@ img {
   color: var(--Dark-cl);
   text-align: center;
   letter-spacing: 0.02em;
+  display: block;
+  margin: 0 auto;
+  padding: 120px 0 72px 0;
 }
 .team-list {
   background-color: var(--White-background-cl);
 }
-
+.tea-container {
+  display: flex;
+  gap: 24px;
+}
+.card {
+  max-width: 264px;
+  height: 380px;
+  margin: 0 auto;
+  border-radius: 0px 0px 4px 4px;
+  padding-bottom: 120px;
+  overflow: hidden;
+}
+.card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 32px;
+}
 .name-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   color: var(--Dark-cl);
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  margin-left: 65px;
 }
 
 .name-text {
