@@ -75,7 +75,7 @@ img {
 /* Styles Header*/
 .header {
   background-color: var(--White-background-cl);
-  border-bottom: 1px solid var(--accent-cl);
+  border-bottom: 1px solid var(--cornfiower-cl);
 }
 .header-container {
   display: flex;
@@ -252,6 +252,7 @@ img {
 .team-section {
   background-color: var(--light-bg-cl);
   padding-bottom: 120px;
+  padding-top: 120px;
 }
 
 .team-title {
@@ -262,8 +263,7 @@ img {
   text-align: center;
   letter-spacing: 0.02em;
   display: block;
-  margin: 0 auto;
-  padding: 120px 0 72px 0;
+  margin-bottom: 72px;
 }
 .team-list-item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
