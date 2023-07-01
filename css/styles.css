@@ -7,6 +7,7 @@
   --Hero-background-cl: #2e2f42;
   --White-background-cl: #ffffff;
   --light-bg-cl: #f4f4fd;
+  --cornfiower-cl: #e7e9fc;
   /* The main number of elements in Flexbox grid */
   --items: 3;
   /* The main gap indent in Flexbox grid */
@@ -18,7 +19,7 @@ body {
   line-height: 1.5;
   font-weight: normal;
   letter-spacing: 0.02em;
-  color: #434455;
+  color: var(--Text-cl);
 
   background-color: var(--White-background-cl);
 }
@@ -211,7 +212,7 @@ img {
   --items: 4;
 }
 .features-list-item {
-   calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 .features-title {
   font-weight: 500;
@@ -240,7 +241,7 @@ img {
 }
 .do-list {
   display: flex;
- gap: var(--indent);
+  gap: var(--indent);
   justify-content: space-between;
 }
 .do-list-item {
@@ -268,7 +269,6 @@ img {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
   border-radius: 0px 0px 4px 4px;
   background-color: var(--White-background-cl);
-
 }
 .team-list {
   display: flex;
@@ -277,11 +277,10 @@ img {
   --items: 4;
 }
 .card {
-   padding: 32px 16px;
+  padding: 32px 16px;
   text-align: center;
 }
 .card-img {
-  
 }
 .team-name-title {
   font-weight: 500;
@@ -290,7 +289,6 @@ img {
   color: var(--Dark-cl);
   letter-spacing: 0.02em;
   margin-bottom: 8px;
-  
 }
 
 .team-position-text {
@@ -298,13 +296,19 @@ img {
   color: var(--Text-cl);
 }
 
-/*main styles*/
+/* Portfolio main styles*/
 .main {
   background-color: var(--White-background-cl);
+  padding-top: 96px;
+  padding-bottom: 120px;
 }
 .title {
 }
-.portfolio-filter {
+.portfolio-filter-list {
+  display: flex;
+  gap: var(--indent);
+  justify-content: center;
+  margin-bottom: 72px;
 }
 .list {
 }
@@ -319,28 +323,44 @@ img {
   color: var(--Primary-Brand-cl);
   text-align: center;
   background-color: var(--light-bg-cl);
+  padding: 12px 24px;
+  border: 1px solid var(--cornfiower-cl);
+  border-radius: 4px;
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   background-color: var(--Pressed-state-cl);
   color: var(--White-background-cl);
+  border: 1px solid transparent;
 }
 
 /*Portfolio photo*/
 .portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: var(--indent);
 }
 
 .portfolio-list-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 .portfolio-link {
 }
+.portfolio-img {
+}
 
+.portfolio-list-card {
+  padding: 32px 16px;
+  border: 1px solid var(--cornfiower-cl);
+  border-top: none;
+}
 .portfolio-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-
+  margin-bottom: 8px;
   color: var(--Dark-cl);
 }
 .portfolio-text {
